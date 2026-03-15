@@ -1,151 +1,85 @@
-/* Body ja taust */
 body{
-  background: linear-gradient(-45deg, #ff0050, #ffb400, #00ffe5, #8000ff);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
-  color: white;
-  font-family: 'Comic Sans MS', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  margin:0;
-  overflow: hidden;
-  transition: background-image 0.5s ease;
+background: linear-gradient(-45deg,#ff0050,#ffb400,#00ffe5,#8000ff);
+background-size:400% 400%;
+animation:gradientMove 15s ease infinite;
+color:white;
+font-family:'Comic Sans MS',sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+height:100vh;
+margin:0;
+overflow:hidden;
 }
 
 @keyframes gradientMove{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
-/* Container */
 .container{
-  text-align:center;
-  max-width:600px;
-  padding:25px;
-  border-radius:25px;
-  background: rgba(0,0,0,0.3);
-  box-shadow: 0 0 50px #ff00ff, 0 0 100px #00ffff;
-  animation: pulseGlow 2s infinite alternate;
+text-align:center;
+max-width:600px;
+padding:25px;
+border-radius:25px;
+background:rgba(0,0,0,0.4);
+box-shadow:0 0 40px #ff00ff;
 }
 
-@keyframes pulseGlow{
-  0%{box-shadow:0 0 50px #ff00ff, 0 0 100px #00ffff;}
-  50%{box-shadow:0 0 100px #ff00ff, 0 0 150px #00ffff;}
-  100%{box-shadow:0 0 50px #ff00ff, 0 0 100px #00ffff;}
-}
-
-/* Title */
 .animated-title{
-  font-size: 50px;
-  margin-bottom:20px;
-  animation: bounceRotate 1.2s infinite alternate;
+font-size:50px;
+margin-bottom:20px;
 }
 
-@keyframes bounceRotate{
-  0%{transform: translateY(0px) rotate(0deg);}
-  50%{transform: translateY(-20px) rotate(10deg);}
-  100%{transform: translateY(0px) rotate(-10deg);}
-}
-
-/* Input */
 input{
-  padding:16px;
-  font-size:18px;
-  border-radius:15px;
-  border:none;
-  width:90%;
-  margin-top:15px;
-  animation: shakeSlow 5s infinite;
+padding:16px;
+font-size:18px;
+border-radius:15px;
+border:none;
+width:90%;
+margin-top:15px;
 }
 
-input:focus{
-  outline:none;
-  transform: scale(1.05) rotate(-2deg);
-}
-
-/* Button */
 button{
-  padding:16px;
-  margin-top:15px;
-  background:#ff0050;
-  color:white;
-  border:none;
-  border-radius:15px;
-  cursor:pointer;
-  font-size:20px;
-  transition: all 0.2s ease;
-  animation: glowPulse 2s infinite alternate;
+padding:14px;
+margin-top:15px;
+background:#ff0050;
+color:white;
+border:none;
+border-radius:15px;
+cursor:pointer;
+font-size:18px;
 }
 
 button:hover{
-  transform: scale(1.2) rotate(10deg);
-  box-shadow: 0 0 50px #ff00ff, 0 0 100px #00ffff;
+transform:scale(1.1);
 }
 
-.btn-glow{
-  animation: glowPulse 1.5s infinite alternate;
-}
-
-@keyframes glowPulse{
-  0%{box-shadow:0 0 20px #ff00ff;}
-  50%{box-shadow:0 0 50px #00ffff;}
-  100%{box-shadow:0 0 20px #ff00ff;}
-}
-
-/* Roast output with rainbow */
 #roastResult{
-  margin-top:25px;
-  font-size:24px;
-  font-weight:bold;
-  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: rainbowShift 3s linear infinite;
+margin-top:25px;
+font-size:26px;
+font-weight:bold;
 }
 
-@keyframes rainbowShift{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
-
-/* Leaderboard */
-ul.leaderboard{
-  margin-top:20px;
-  padding:0;
-  list-style:none;
-}
-
-ul.leaderboard li{
-  margin-bottom:10px;
-  font-size:18px;
-  animation: slideFlash 2s infinite alternate;
-}
-
-@keyframes slideFlash{
-  0%{opacity:0; transform:translateX(-20px); color:#ff0050;}
-  50%{opacity:1; transform:translateX(0px); color:#ffff00;}
-  100%{opacity:0; transform:translateX(20px); color:#00ffff;}
-}
-
-/* Input shake */
-@keyframes shakeSlow{
-  0%{transform:translateX(0);}
-  25%{transform:translateX(-3px);}
-  50%{transform:translateX(3px);}
-  75%{transform:translateX(-3px);}
-  100%{transform:translateX(0);}
-}
 .explode{
-animation: explode 0.5s ease;
+animation:explode .5s ease;
 }
 
 @keyframes explode{
-0%{transform:scale(0.5) rotate(-10deg);}
+0%{transform:scale(.5) rotate(-10deg);}
 50%{transform:scale(1.3) rotate(5deg);}
 100%{transform:scale(1);}
+}
+
+ul{
+list-style:none;
+padding:0;
+margin-top:20px;
+}
+
+ul li{
+margin-bottom:8px;
+font-size:16px;
 }
